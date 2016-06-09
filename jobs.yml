@@ -5,6 +5,14 @@ jobs: #resync the jobs
     steps:
       - GET nginx-image
       - GET myEcsParams
+      
+  - name: generate-multi-mani
+    type: manifest
+    integration: "trriplejay docker hub"
+    steps:
+      - GET nginx-image
+      - GET generate-manifest-1
+      - GET myEcsParams
 
   - name: deploy-service-1
     type: ecsDeploy
