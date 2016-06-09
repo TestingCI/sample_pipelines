@@ -10,7 +10,7 @@ jobs: #resync the jobs
     type: manifest
     integration: "trriplejay docker hub"
     steps:
-      - GET nginx-image
+      - GET simple-image
       - GET generate-manifest-1
       - GET myEcsParams
 
